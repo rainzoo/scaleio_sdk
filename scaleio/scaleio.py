@@ -20,7 +20,7 @@ class SIO_Generic_Object(object):
 
     def __str__(self):
         """
-        A convinience method to pretty print the contents of the class instance
+        A convenience method to pretty print the contents of the class instance
         """
         # to show include all variables in sorted order
         return "<{}> @ {}:\n".format(self.get_class_name(), id(self)) + "\n".join(
@@ -62,7 +62,7 @@ class ScaleIO_Protection_Domain(SIO_Generic_Object):
     @staticmethod
     def from_dict(dict):
         """
-        A convinience method that directly creates a new instance from a passed dictionary (that probably came from a
+        A convenience method that directly creates a new instance from a passed dictionary (that probably came from a
         JSON response from the server.
         """
         return ScaleIO_Protection_Domain(**dict)
@@ -107,7 +107,7 @@ class ScaleIO_Volume(SIO_Generic_Object):
     @staticmethod
     def from_dict(dict):
         """
-        A convinience method that directly creates a new instance from a passed dictionary (that probably came from a
+        A convenience method that directly creates a new instance from a passed dictionary (that probably came from a
         JSON response from the server.
         """
         return ScaleIO_Volume(**dict)
@@ -138,7 +138,7 @@ class ScaleIO_SDC(SIO_Generic_Object):
     @staticmethod
     def from_dict(dict):
         """
-        A convinience method that directly creates a new instance from a passed dictionary (that probably came from a
+        A convenience method that directly creates a new instance from a passed dictionary (that probably came from a
         JSON response from the server.
         """
         return ScaleIO_SDC(**dict)
@@ -188,7 +188,7 @@ class ScaleIO_SDS(SIO_Generic_Object):
     @staticmethod
     def from_dict(dict):
         """
-        A convinience method that directly creates a new instance from a passed dictionary (that probably came from a
+        A convenience method that directly creates a new instance from a passed dictionary (that probably came from a
         JSON response from the server.
         """
         return ScaleIO_SDS(**dict)
@@ -200,7 +200,7 @@ class IP_List(object):
 
     def __str__(self):
         """
-        A convinience method to pretty print the contents of the class instance
+        A convenience method to pretty print the contents of the class instance
         """
         # to show include all variables in sorted order
         return "{} : IP: {} Role: {}".format("IP",self.ip,self.role)
@@ -215,7 +215,7 @@ class Link(object):
 
     def __str__(self):
         """
-        A convinience method to pretty print the contents of the class instance
+        A convenience method to pretty print the contents of the class instance
         """
         # to show include all variables in sorted order
         return "{} : Target: '{}' Relative: '{}'".format("Link", self.href, self.rel)
@@ -282,7 +282,7 @@ class ScaleIO(SIO_Generic_Object):
 
     def _do_post(self, url, **kwargs):
         """
-        Convinient method for POST requests
+        Convenient method for POST requests
         Returns http request status value from a POST request
         """
         scaleioapi_post_headers = {'Content-type':'application/json','Version':'1.0'}
